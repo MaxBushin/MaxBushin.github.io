@@ -1,4 +1,4 @@
-I"�<style>
+I"�<style>
    .round {
 	border-radius: 50%;
     box-shadow: 0 0 0 1px #000, 0 0 5px #dbdbdb; /* Параметры теней */
@@ -24,7 +24,7 @@
     <ul>
   		<li><a href="https://MaxBushin.github.io/#blog">Мой блог</a> и <a href="https://github.com/MaxBushin">проекты на Github</a></li>
 		<li><a href="https://kaggle.com/MaxBushin">Профиль на Kaggle</a></li>
-  		<li><a href="https://MaxBushin.github.io/Cert">Курсы и сертификаты</a> Coursera, Stepik</li>
+  		<li><a href="https://maxbushin.github.io/event/2020/02/21/Cert/">Курсы и сертификаты</a> Coursera, Stepik</li>
 		<li>Я в социальных сетях:  <a href="https://www.linkedin.com/in/maxbushin">Linkedin</a>, <a href="https://vk.com/id60689497">VK</a></li>
 		<li>Мне можно написать <a href="mailto:maxim.bushin@gmail.com">на E-mail</a> и <a href="https://t.me/madvel">в Телеграмм </a></li>
   	</ul>
@@ -120,5 +120,10 @@
     
   </div>
 </div>
+
+
+
+
+
 </div>
 :ET
