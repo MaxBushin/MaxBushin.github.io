@@ -5,11 +5,12 @@ date:   2020-02-21
 image: githubBlog.jpg
 categories: blog github jekyll
 ---
-<p class="intro">Это тест блога, внутри заметки по установке. </p>
+<blockquote>Этот пост написан для тестирования работы блога. </blockquote>
+<p class="intro">При установке, в основном, пользовался <a href="https://www.youtube.com/watch?v=xrxY5h906iI&feature=youtu.be&list=PLyHuZVg03hQjtV45HPlfuPzHJOtEoK6DT">вот этими уроками</a>. За основу взял сборку от <a href="https://gosha20777.github.io/">GOSHA20777</a>. Ниже мои заметки по установке, которые могут служить дополнением к <a href="https://gosha20777.github.io/blog/github/jekyll/2017/01/28/blog-with-github/">этому посту</a>.</p>
 
 {% highlight PowerShell %}
 
-	для установки блога
+	гемы для установки блога
 
 bundle install
 gem install jekyll-sitemap
@@ -32,7 +33,7 @@ jekyll s
 
 удалить Gemfile.lock
 удалить версии в Gemfile
-без лок и папки сайт
+без папки сайт
 
 git config --global user.email "maxim.bushin@gmail.com"
 git config --global user.name "MaxBushin"
@@ -46,13 +47,20 @@ git push -u origin master
 
 
 
-	темы Jekyll
+	настройка темы Jekyll
 
 index.html домашняя страница
 _layouts макеты страницы
 include позволяет включать содержимое из другого файла, хранящегося в папке _includes
   header - заголовок (можно убрать)
 _config.yml настройки для сайта, заполняются пользователем
-
+style.css длинная строка внизу - это стили
 {% endhighlight %}
 
+<h3> Полезные ссылки</h3>
+
+<ul>
+  <li><a href="https://jekyllrb.com/docs/">Официальная документация</a></li>
+  <li><a href="https://habr.com/ru/post/336266/">Статья на харбе от 2017 года</a></li>
+  <li><a href="https://webdesign.tutsplus.com/ru/tutorials/how-to-set-up-a-jekyll-theme--cms-26332">Настройка темы</a></li>
+</ul>

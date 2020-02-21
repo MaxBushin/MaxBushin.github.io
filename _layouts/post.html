@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <div class="post">
   {% if page.image %}
     <div class="featuredImage">
@@ -11,7 +12,10 @@ layout: default
   <p class="meta">{{ page.date | date: '%B %d, %Y' }} | <span class="time">{{ page.content | number_of_words | divided_by:180 }}</span> Minute Read</p>
   
   {{ content }}
-
+  
+  
+  
+  
   <!-- POST NAVIGATION -->
   <div class="postNav clearfix">
     {% if page.previous.url %} 
@@ -29,6 +33,26 @@ layout: default
       </a>
     {% endif %} 
   </div>
+
+
+
+  <!-- 
+
+  <div class="postNav clearfix">
+      <a class="prev image" href=""> <span>&laquo;&nbsp;XXX</span>
+	  
+	     <style>
+
+postNav1.{border-top:1px solid #e6e6e6;border-bottom:10px solid #e6e6e6;overflow:hidden}
+xt.{display:block;width:100%;height:5rem;overflow:hidden;position:relative;font-family:"Open Sans",Helvetica,Arial,sans-serif;font-weight:800;font-size:.9em;text-transform:uppercase;text-align:center}
+         </style>
+
+
+	  
+	  
+  </div>
+
+  -->
 
   <script>
     var jcMyTheme = {

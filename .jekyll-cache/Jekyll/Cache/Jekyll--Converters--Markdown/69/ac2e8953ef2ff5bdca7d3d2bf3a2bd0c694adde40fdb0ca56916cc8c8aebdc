@@ -1,0 +1,58 @@
+I"A<blockquote>Этот пост написан для тестирования работы блога. </blockquote>
+<p class="intro">При установке, в основном, пользовался <a href="https://www.youtube.com/watch?v=xrxY5h906iI&amp;feature=youtu.be&amp;list=PLyHuZVg03hQjtV45HPlfuPzHJOtEoK6DT">вот этими уроками</a>. За основу взял сборку от <a href="https://gosha20777.github.io/">GOSHA20777</a>. Ниже мои заметки по установке, которые могут служить дополнением к <a href="https://gosha20777.github.io/blog/github/jekyll/2017/01/28/blog-with-github/">этому посту</a>.</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="w">	</span><span class="err">гемы</span><span class="w"> </span><span class="err">для</span><span class="w"> </span><span class="err">установки</span><span class="w"> </span><span class="err">блога</span><span class="w">
+
+</span><span class="nf">bundle</span><span class="w"> </span><span class="nx">install</span><span class="w">
+</span><span class="nf">gem</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">jekyll-sitemap</span><span class="w">
+</span><span class="nf">gem</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">jekyll-paginate</span><span class="w">
+</span><span class="nf">gem</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">jekyll-feed</span><span class="w">
+</span><span class="nf">gem</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">jekyll-paginate</span><span class="w">
+</span><span class="nf">gem</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">jekyll-theme-clean-blog</span><span class="w">
+</span><span class="nf">gem</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">sassc-rails</span><span class="w">
+</span><span class="nf">gem</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">rails</span><span class="w">
+</span><span class="nf">gem</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">wdm</span><span class="w">
+</span><span class="nf">gem</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">github-pages</span><span class="w">
+
+
+</span><span class="nf">jekyll</span><span class="w"> </span><span class="nx">b</span><span class="w">
+</span><span class="nf">jekyll</span><span class="w"> </span><span class="nx">s</span><span class="w">
+
+
+
+	</span><span class="err">залив</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">сайт</span><span class="w">
+
+</span><span class="err">удалить</span><span class="w"> </span><span class="nf">Gemfile.lock</span><span class="w">
+</span><span class="err">удалить</span><span class="w"> </span><span class="err">версии</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="nf">Gemfile</span><span class="w">
+</span><span class="err">без</span><span class="w"> </span><span class="err">папки</span><span class="w"> </span><span class="err">сайт</span><span class="w">
+
+</span><span class="nf">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="nt">--global</span><span class="w"> </span><span class="nx">user.email</span><span class="w"> </span><span class="s2">"maxim.bushin@gmail.com"</span><span class="w">
+</span><span class="nf">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="nt">--global</span><span class="w"> </span><span class="nx">user.name</span><span class="w"> </span><span class="s2">"MaxBushin"</span><span class="w">
+
+</span><span class="nf">git</span><span class="w"> </span><span class="nx">clone</span><span class="w"> </span><span class="nx">https://github.com/MaxBushin/MaxBushin.github.io.git</span><span class="w">
+</span><span class="nf">cd</span><span class="w"> </span><span class="nx">MaxBushin.github.io</span><span class="w">
+</span><span class="nf">git</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="o">.</span><span class="w">
+</span><span class="nf">git</span><span class="w"> </span><span class="nx">status</span><span class="w">
+</span><span class="nf">git</span><span class="w"> </span><span class="nx">commit</span><span class="w"> </span><span class="nt">-m</span><span class="w"> </span><span class="s2">"v1"</span><span class="w">
+</span><span class="nf">git</span><span class="w"> </span><span class="nx">push</span><span class="w"> </span><span class="nt">-u</span><span class="w"> </span><span class="nx">origin</span><span class="w"> </span><span class="nx">master</span><span class="w">
+
+
+
+	</span><span class="err">настройка</span><span class="w"> </span><span class="err">темы</span><span class="w"> </span><span class="nf">Jekyll</span><span class="w">
+
+</span><span class="nf">index.html</span><span class="w"> </span><span class="err">домашняя</span><span class="w"> </span><span class="err">страница</span><span class="w">
+</span><span class="nf">_layouts</span><span class="w"> </span><span class="err">макеты</span><span class="w"> </span><span class="err">страницы</span><span class="w">
+</span><span class="nf">include</span><span class="w"> </span><span class="err">позволяет</span><span class="w"> </span><span class="err">включать</span><span class="w"> </span><span class="err">содержимое</span><span class="w"> </span><span class="err">из</span><span class="w"> </span><span class="err">другого</span><span class="w"> </span><span class="err">файла</span><span class="p">,</span><span class="w"> </span><span class="err">хранящегося</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">папке</span><span class="w"> </span><span class="nx">_includes</span><span class="w">
+  </span><span class="nf">header</span><span class="w"> </span><span class="nf">-</span><span class="w"> </span><span class="err">заголовок</span><span class="w"> </span><span class="p">(</span><span class="err">можно</span><span class="w"> </span><span class="err">убрать</span><span class="p">)</span><span class="w">
+</span><span class="nf">_config.yml</span><span class="w"> </span><span class="err">настройки</span><span class="w"> </span><span class="err">для</span><span class="w"> </span><span class="err">сайта</span><span class="p">,</span><span class="w"> </span><span class="err">заполняются</span><span class="w"> </span><span class="err">пользователем</span><span class="w">
+</span><span class="nf">style.css</span><span class="w"> </span><span class="err">длинная</span><span class="w"> </span><span class="err">стока</span><span class="w"> </span><span class="err">внизу</span><span class="w"> </span><span class="nf">-</span><span class="w"> </span><span class="err">это</span><span class="w"> </span><span class="err">стили</span></code></pre></figure>
+
+<p>&lt;h3 Полезные ссылки.&lt;/h3&gt;</p>
+
+<ul>
+  <li><a href="https://jekyllrb.com/docs/">Официальная документация</a>
+  <li><a href="https://habr.com/ru/post/336266/">Статья на харбе от 2017 года</a></li>
+    <li><a href="https://webdesign.tutsplus.com/ru/tutorials/how-to-set-up-a-jekyll-theme--cms-26332">Настройка темы</a></li>
+&lt;/ul&gt;
+</li></ul>
+:ET

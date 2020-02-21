@@ -1,0 +1,19 @@
+I"3<div id="articles">
+  <h1>Articles</h1>
+  <ul class="posts noList">
+    
+      <li>
+      	<span class="date">21 Feb 2020</span>
+      	<h3><a href="/blog/github/jekyll/2020/02/21/blog-github/">Блог на Jekyll и GitHub</a></h3>
+      	<p class="description">Этот пост написан для тестирования работы блога.Внутри заметки по установке, которые могут служить дополнением к этом...</p>
+      </li>
+    
+      <li>
+      	<span class="date">21 Feb 2020</span>
+      	<h3><a href="/event/2020/02/21/Cert/">Курсы и сертификаты</a></h3>
+      	<p class="description">Сдесь еще ничего нет, но я начал вот эту специальзацию.</p>
+      </li>
+    
+  </ul>
+</div>
+:ET

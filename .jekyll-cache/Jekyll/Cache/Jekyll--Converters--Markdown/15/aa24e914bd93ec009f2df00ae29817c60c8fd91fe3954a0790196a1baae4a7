@@ -1,0 +1,19 @@
+I"�<div id="articles">
+  <h1>Articles</h1>
+  <ul class="posts noList">
+    
+      <li>
+      	<span class="date">21 Feb 2020</span>
+      	<h3><a href="/blog/github/jekyll/2020/02/21/blog-github/">Блог на Jekyll и GitHub</a></h3>
+      	<p class="description">Это тест блога, внутри заметки по установке. 	для установки блогаbundle installgem install jekyll-sitemapgem install ...</p>
+      </li>
+    
+      <li>
+      	<span class="date">03 Sep 2018</span>
+      	<h3><a href="/event/2018/09/03/Cert/">День знаний в Mail.ru или Moscow Data Science Major</a></h3>
+      	<p class="description">Первого сентября я был на конференции DS Major от ODS и Mail.ru. В этой статье я кратко расскажу о том, что там было ...</p>
+      </li>
+    
+  </ul>
+</div>
+:ET
