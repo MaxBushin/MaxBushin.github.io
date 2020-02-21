@@ -1,0 +1,121 @@
+I"	<style>
+   .round {
+	border-radius: 50%;
+    box-shadow: 0 0 0 1px #000, 0 0 5px #dbdbdb; /* Параметры теней */
+   }
+
+   .center {
+    text-align: center; /* Выравнивание по центру */ 
+   }
+   
+   .ul {
+   
+    margin-right: 200px; /* Отступ  */
+   }
+   
+  </style>
+
+<div class="post">
+	<!--<h1 class="pageTitle">About Me</h1> -->
+	
+	<p class="center"><img src="/assets/img/avatar.jpg" width="150" height="150" class="round" /> </p>
+    <h3 class="postTitle">Bushin Maxim </h3>
+	<p class="postTitle"><span style="font-size: 1.25em">I’m junior Data Scientist </span></p>
+  
+		<!--<p>Добро пожаловать на сайт.</p> -->
+      
+    <ul>
+  		<li><a href="https://MaxBushin.github.io/#blog">Мой блог</a> и <a href="https://github.com/MaxBushin">проекты на Github</a></li>
+		<li><a href="https://kaggle.com/MaxBushin">Профиль на Kaggle</a></li>
+  		<li><a href="https://MaxBushin.github.io/Cert">Cердефикаты</a> Coursera, Stepik</li>
+		<li>Я в социальных сетях:  <a href="https://www.linkedin.com/in/maxbushin">Linkedin</a>, <a href="https://vk.com/id60689497">VK</a></li>
+		<li>Мне можно написать <a href="mailto:maxim.bushin@gmail.com">на E-mail</a> и <a href="https://t.me/madvel">в Телеграмм </a></li>
+  	</ul>
+  
+	<!--<p class="postTitle"><span style="color: red; font-weight: bold; font-size: 1.25em">I </span></p> -->
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+  
+<p><a name="blog"></a></p> 
+<div class="home" id="home">
+
+  <h1 class="pageTitle">Blog</h1>
+  
+
+
+  <div class="form  form--search">
+    <form id="search-form" action="">
+      <label class="label" for="search"></label>
+      <input class="input" id="search" type="search" name="search" placeholder="search" autocomplete="off" />
+  
+      <ul class="list  list--results" id="list">
+          <!-- results go here -->
+      </ul>
+    </form>
+  </div>
+  
+  <script type="text/javascript" src="/assets/js/fetch.js"></script>
+  <script type="text/javascript">
+    const endpoint = '/assets/search.json';
+    const pages = [];
+    fetch(endpoint)
+      .then(blob => blob.json())
+      .then(data => pages.push(...data))
+    function findResults(termToMatch, pages) {
+      return pages.filter(item => {
+        const regex = new RegExp(termToMatch, 'gi');
+        return item.title.match(regex) || item.content.match(regex);
+      });
+    }
+    function displayResults() {
+      const resultsArray = findResults(this.value, pages);
+      const html = resultsArray.map(item => {
+        return `
+          <li class="item  item--result">
+            <article class="article  typeset">
+              <h4><a href="${item.url}">${item.title}</a></h4>
+              <p>${item.excerpt}</p>
+            </article>
+          </li>`;
+      }).join('');
+      if ((resultsArray.length == 0) || (this.value == '')) {
+        resultsList.innerHTML = `<p>Sorry, nothing was found</p>`;
+      } else {
+        resultsList.innerHTML = html;
+      }
+    }
+    const field = document.querySelector('#search');
+    const resultsList = document.querySelector('#list');
+    field.addEventListener('keyup', displayResults);
+    field.addEventListener('keypress', function(event) {
+      if (event.keyCode == 13) {
+        event.preventDefault();
+      }
+    });
+  </script>
+  <noscript>Please enable JavaScript to use the search form.</noscript>
+  
+
+
+  <ul class="posts noList">
+    
+      <li>
+        <span class="date">February 21, 2020</span>
+        <h3><a class="post-link" href="/blog/github/jekyll/2020/02/21/blog-github/">Блог на Jekyll и GitHub</a></h3>
+        <p class="description">Это тест блога, внутри заметки по установке. 	для установки блогаbundle installgem install jekyll-sitemapgem install jekyll-paginategem install jekyll-feedgem install jekyll-paginategem install jekyll-theme-clean-bloggem install sassc-railsgem ins...</p>
+      </li>
+    
+  </ul>
+  <!-- Pagination links -->
+  <div class="pagination">
+    
+    
+  </div>
+</div>
+</div>
+:ET

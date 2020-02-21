@@ -1,0 +1,42 @@
+I"b<p class="intro">Это тест блога, внутри заметки по установке. </p>
+
+<h3 id="1-для-установки-блога">#1 для установки блога</h3>
+
+<p>bundle install
+gem install jekyll-sitemap
+gem install jekyll-paginate
+gem install jekyll-feed
+gem install jekyll-paginate
+gem install jekyll-theme-clean-blog
+gem install sassc-rails
+gem install rails
+gem install wdm
+gem install github-pages</p>
+
+<p>jekyll b
+jekyll s</p>
+
+<h3 id="1-залив-на-сайт">#1 залив на сайт</h3>
+
+<p>удалить Gemfile.lock
+удалить версии в Gemfile
+без лок и папки сайт</p>
+
+<p>git config –global user.email “maxim.bushin@gmail.com”
+git config –global user.name “MaxBushin”</p>
+
+<p>git clone https://github.com/MaxBushin/MaxBushin.github.io.git
+cd MaxBushin.github.io
+git add .
+git status
+git commit -m “v1”
+git push -u origin master</p>
+
+<h3 id="1-темы-jekyll">#1 темы Jekyll</h3>
+
+<p>index.html домашняя страница
+_layouts макеты страницы
+include позволяет включать содержимое из другого файла, хранящегося в папке _includes
+  header - заголовок (можно убрать)
+_config.yml настройки для сайта, заполняются пользователем</p>
+:ET

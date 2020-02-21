@@ -1,0 +1,40 @@
+# Site settings
+title: gos
+description: Created by Maxim Bushin
+
+url: https://github.com/MaxBushin/
+baseurl: ""
+aboutUrl: /about
+paginate_path: "blog/page:num/"
+permalink: blog/:title/
+
+
+navigation:
+ - title: Home
+   url: /index.html
+ - title: About
+   url: /about
+ - title: Contact
+   url: /contact
+ - title: Search
+   url: /search
+
+social:
+ #  github: 
+ #  vkontakte: 
+#   twitter: 
+ #  facebook: 
+ #  email: 
+
+# Google Analytics
+# To enable google analytics, uncomment below line with a valid Google Tracking ID
+# google_tracking_id:
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
